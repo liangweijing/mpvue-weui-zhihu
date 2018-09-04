@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/categories/main",
+
+    "pages/question/main",
+    "pages/index/main",
+    "pages/chart/main",
+    "pages/lesson/main",
+    "pages/logs/main",
+    "pages/counter/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2768C4",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#EFF1F1",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/main",
+      "text": "首页",
+      "iconPath": "static/img/首页.png",
+      "selectedIconPath": "static/img/首页sel.png"
+    }, {
+      "pagePath": "pages/categories/main",
+      "text": "分类",
+      "iconPath": "static/img/分类.png",
+      "selectedIconPath": "static/img/分类sel.png"
+    }, {
+      "pagePath": "pages/chart/main",
+      "text": "型号互换表",
+      "iconPath": "static/img/切换.png",
+      "selectedIconPath": "static/img/切换sel.png"
+    }, {
+      "pagePath": "pages/question/main",
+      "text": "问答",
+      "iconPath": "static/img/问答.png",
+      "selectedIconPath": "static/img/问答sel.png"
+    }, {
+      "pagePath": "pages/lesson/main",
+      "text": "课堂",
+      "iconPath": "static/img/课堂.png",
+      "selectedIconPath": "static/img/课堂sel.png"
+    }],
+    "backgroundColor": "#FBFBFB",
+    "selectedColor": "#2768C8",
+    "borderStyle": "white"
+  }
+}
