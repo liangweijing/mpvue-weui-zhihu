@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
 export default {
   created () {
@@ -8,10 +9,23 @@ export default {
 
     console.log('app created and cache logs by setStorageSync')
   }
+=======
+<template>
+  <div id="app">
+    <!--<img src="./assets/logo.png">-->
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'app'
+>>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
 }
 </script>
 
 <style>
+<<<<<<< HEAD
 .container {
   height: 100%;
   display: flex;
@@ -28,4 +42,14 @@ export default {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
+=======
+/*#app {*/
+  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
+  /*text-align: center;*/
+  /*color: #2c3e50;*/
+  /*margin-top: 60px;*/
+/*}*/
+>>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
 </style>

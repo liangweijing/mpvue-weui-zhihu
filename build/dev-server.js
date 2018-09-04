@@ -5,12 +5,19 @@ if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 
+<<<<<<< HEAD
 // var opn = require('opn')
+=======
+var opn = require('opn')
+>>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
 var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
+<<<<<<< HEAD
 var portfinder = require('portfinder')
+=======
+>>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
 var webpackConfig = require('./webpack.dev.conf')
 
 // default port where dev server listens for incoming traffic
@@ -24,6 +31,7 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 var compiler = webpack(webpackConfig)
 
+<<<<<<< HEAD
 // var devMiddleware = require('webpack-dev-middleware')(compiler, {
 //   publicPath: webpackConfig.output.publicPath,
 //   quiet: true
@@ -40,6 +48,24 @@ var compiler = webpack(webpackConfig)
 //     cb()
 //   })
 // })
+=======
+var devMiddleware = require('webpack-dev-middleware')(compiler, {
+  publicPath: webpackConfig.output.publicPath,
+  quiet: true
+})
+
+var hotMiddleware = require('webpack-hot-middleware')(compiler, {
+  log: false,
+  heartbeat: 2000
+})
+// force page reload when html-webpack-plugin template changes
+compiler.plugin('compilation', function (compilation) {
+  compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
+    hotMiddleware.publish({ action: 'reload' })
+    cb()
+  })
+})
+>>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
 
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
@@ -54,23 +80,36 @@ Object.keys(proxyTable).forEach(function (context) {
 app.use(require('connect-history-api-fallback')())
 
 // serve webpack bundle output
+<<<<<<< HEAD
 // app.use(devMiddleware)
 
 // enable hot-reload and state-preserving
 // compilation error display
 // app.use(hotMiddleware)
+=======
+app.use(devMiddleware)
+
+// enable hot-reload and state-preserving
+// compilation error display
+app.use(hotMiddleware)
+>>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
 
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
+<<<<<<< HEAD
 // var uri = 'http://localhost:' + port
+=======
+var uri = 'http://localhost:' + port
+>>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
 
 var _resolve
 var readyPromise = new Promise(resolve => {
   _resolve = resolve
 })
 
+<<<<<<< HEAD
 // console.log('> Starting dev server...')
 // devMiddleware.waitUntilValid(() => {
 //   console.log('> Listening at ' + uri + '\n')
@@ -104,3 +143,23 @@ module.exports = new Promise((resolve, reject) => {
     console.log('没有找到空闲端口，请打开任务管理器杀死进程端口再试', error)
   })
 })
+=======
+console.log('> Starting dev server...')
+devMiddleware.waitUntilValid(() => {
+  console.log('> Listening at ' + uri + '\n')
+  // when env is testing, don't need open it
+  if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
+    opn(uri)
+  }
+  _resolve()
+})
+
+var server = app.listen(port)
+
+module.exports = {
+  ready: readyPromise,
+  close: () => {
+    server.close()
+  }
+}
+>>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
