@@ -64,6 +64,7 @@ export default {
   },
   methods: {
     jumpToDetail () {
+      this.$router.push({ path: '/pages/question/detail/main' })
       console.log(this.$router)
     },
     getUserInfo () {
