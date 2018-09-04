@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/categories/main",
-
     "pages/question/main",
+
+    "pages/categories/main",
     "pages/index/main",
     "pages/chart/main",
     "pages/lesson/main",
