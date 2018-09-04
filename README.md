@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-# zhihu
+# zhihuz
 
 > A Mpvue project
-=======
-# tpls
-
-> A Vue.js project
->>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
 
 ## Build Setup
 

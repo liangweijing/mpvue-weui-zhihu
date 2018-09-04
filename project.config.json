@@ -10,7 +10,7 @@
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
 	"appid": "touristappid",
-	"projectname": "zhihu",
+	"projectname": "zhihuz",
 	"condition": {
 		"search": {
 			"current": -1,

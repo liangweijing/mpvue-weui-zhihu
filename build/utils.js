@@ -20,7 +20,6 @@ exports.cssLoaders = function (options) {
     }
   }
 
-<<<<<<< HEAD
   var postcssLoader = {
     loader: 'postcss-loader',
     options: {
@@ -39,11 +38,6 @@ exports.cssLoaders = function (options) {
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     var loaders = [cssLoader, px2rpxLoader, postcssLoader]
-=======
-  // generate loader string to be used with extract text plugin
-  function generateLoaders (loader, loaderOptions) {
-    var loaders = [cssLoader]
->>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
@@ -58,11 +52,7 @@ exports.cssLoaders = function (options) {
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
-<<<<<<< HEAD
         fallback: 'vue-style-loader'
-=======
-        fallback: 'vue-style-loader',
->>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
@@ -72,10 +62,7 @@ exports.cssLoaders = function (options) {
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html
   return {
     css: generateLoaders(),
-<<<<<<< HEAD
     wxss: generateLoaders(),
-=======
->>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
     postcss: generateLoaders(),
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),

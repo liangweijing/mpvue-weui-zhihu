@@ -6,15 +6,9 @@ module.exports = {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-<<<<<<< HEAD
     assetsSubDirectory: '',
     assetsPublicPath: '/',
     productionSourceMap: false,
-=======
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    productionSourceMap: true,
->>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
@@ -30,14 +24,9 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     port: 8080,
-<<<<<<< HEAD
     // 在小程序开发者工具中不需要自动打开浏览器
     autoOpenBrowser: false,
     assetsSubDirectory: '',
-=======
-    autoOpenBrowser: true,
-    assetsSubDirectory: 'static',
->>>>>>> c35f5ceb1900c6c0fe3e22a9ab053a7dee3fab59
     assetsPublicPath: '/',
     proxyTable: {},
     // CSS Sourcemaps off by default because relative paths are "buggy"
